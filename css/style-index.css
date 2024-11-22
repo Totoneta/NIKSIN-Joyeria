@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #fff 50%, #6b6b6b);
+}
+
+/* Navegación */
+.nav {
+    z-index: 10;
+    width: 100%;
+    background-color: #ffffff;
+    height: 4rem;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-list>a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list>a>img {
+    height: 4rem;
+}
+
+.nav-item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item>a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-item>a:hover {
+    color: grey;
+}
+
+/* Img Front */
+.front-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.front-div>img {
+    width: 50%;
+}
+
+/* Jewells */
+.Jewels {
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 45%;
+    right: 0;
+}
+
+.Jewels-2 {
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 85%;
+    left: 5%;
+}
+
+/* Nosotros */
+.nosotros {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+.nos-uno {
+    margin: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10rem;
+    width: 60%;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #000;
+    background: linear-gradient(to right, #1a1a1a 40%, transparent);
+}
+
+.nos-uno>img {
+    height: 10rem;
+}
+
+.nos-texto-uno {
+    margin: 1.5rem;
+    width: 70%;
+}
+
+.nos-dos {
+    background: linear-gradient(to left, #f2f2f2 40%, transparent);
+    margin: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    height: 10rem;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.nos-dos>img {
+    height: 10rem;
+}
+
+.nos-texto-dos {
+    margin: 1.5rem;
+    width: 75%;
+}
+
+/* Productos Carrucel */
+.flecha-der {
+    position: absolute;
+    height: 22rem;
+    width: 3rem;
+    background: linear-gradient(to left, #000000 10%, transparent);
+    cursor: pointer;
+    right: 0;
+    z-index: 1;
+}
+
+.flecha-der:hover {
+    background: linear-gradient(to left, #2e2e2e 10%, transparent);
+}
+
+.flecha-izq {
+    position: absolute;
+    height: 22rem;
+    width: 3rem;
+    background: linear-gradient(to right, #000000 10%, transparent);
+    cursor: pointer;
+    left: 0;
+    z-index: 1;
+
+}
+
+.flecha-izq:hover {
+    background: linear-gradient(to right, #2e2e2e 10%, transparent);
+}
+
+.productos {
+    width: 100%;
+    overflow: hidden;
+}
+
+.productos-container {
+    display: flex;
+    justify-content: center;
+    height: 22rem;
+    margin-bottom: 3rem;
+    width: 200%;
+    transition: transform 2s;
+    position: relative;
+    z-index: 0;
+    background-color: #000;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.prod {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 22rem;
+    gap: 1rem;
+}
+
+
+.prod>img {
+    width: auto;
+    height: 13rem;
+    border: 3px solid #fff;
+}
+
+.prod-texto {
+    text-align: center;
+    height: 40%;
+    width: auto;
+    max-width: 90%;
+    color: #fff;
+}
+
+.prod-texto>h2 {
+    font-size: 1.4rem;
+}
+
+.prod-texto>p {
+    font-size: .9rem;
+}
+
+/* Compramos Joyas */
+.compramos-aside {
+    padding-bottom: 3rem;
+}
+
+.compramos-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: Mostrar;
+    animation-duration: 2s;
+    animation-range: entry 10% cover 50%;
+    view-timeline-name: --compramos;
+    view-timeline-axis: block;
+    animation-timeline: --compramos;
+    animation-fill-mode: both;
+}
+
+/* Animacion Scroll */
+@keyframes Mostrar {
+    from {
+        opacity: 0;
+        scale: 20%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.compramos-container>figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compramos-container>figure>img {
+    width: 95%;
+    height: 30rem;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    border: 5px solid #000000;
+
+}
+
+.compramos-text {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 70%;
+    color: #ffdd00;
+    text-shadow: 0px 0px 5px #000;
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.compramos-text>h2 {
+    font-size: 4rem;
+    width: 40rem;
+}
+
+.compramos-text>p {
+    font-size: 1.5rem;
+    width: 30rem;
+}
+
+/* tres-icons */
+.tres-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    gap: 2rem;
+}
+
+.tres-icons-subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 15rem;
+    padding: 1rem .5rem;
+
+}
+
+.tres-icons-subcontainer>img {
+    height: 7rem;
+    width: 7rem;
+}
+
+.tres-icons-subcontainer>h2 {
+    color: #000;
+    text-shadow: 0px 0px 2px #000;
+    font-size: 30px;
+}
+
+.tres-icons-subcontainer>span {
+    color: #636363;
+    font-size: 20px;
+}
+
+
+
+/* Footer */
+.fot-div {
+    height: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.fot-div>img {
+    height: 10rem;
+}
+
+
+/* Mediaqueryes */
+@media (min-width: 350px) and (max-width: 900px) {
+
+    /* Navegación */
+    .nav {
+        height: 3.5rem;
+    }
+
+    .nav-list>a>img {
+        height: 2.5rem;
+    }
+
+    .nav-item>a {
+        font-size: 1rem;
+    }
+
+    /* Img Front */
+    .front-div>img {
+        width: 70%;
+    }
+
+    /* Jewells */
+    .Jewels {
+        height: 20%;
+    }
+
+    .Jewels-2 {
+        height: 20%;
+        top: 75%;
+    }
+
+    /* Nosotros */
+    .nosotros {
+        gap: 1rem;
+    }
+
+    .nos-uno {
+        margin: 0rem;
+        height: 15rem;
+        width: 95%;
+        text-align: center;
+        gap: .3rem;
+    }
+
+    .nos-texto-uno {
+        margin: .3rem;
+        font-size: 15px;
+    }
+
+    .nos-dos {
+        margin: 0rem;
+        height: 17rem;
+        width: 95%;
+        text-align: center;
+        gap: .3rem;
+    }
+
+    .nos-texto-dos {
+        margin: .3rem;
+        font-size: 15px;
+    }
+
+
+    /* Productos Carrucel */
+    .flecha-der {
+        width: 2rem;
+    }
+
+    .flecha-izq {
+        width: 2rem;
+    }
+
+    .productos {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .prod>img {
+        width: 100%;
+        height: 13rem;
+    }
+
+    .prod-texto {
+        height: 60%;
+    }
+
+    .prod-texto>h2 {
+        font-size: 1.2rem;
+    }
+
+    .prod-texto>p {
+        font-size: .7rem;
+    }
+
+    /* Compramos Joyas */
+    .compramos-container>figure>img {
+        height: 20rem;
+        width: 95%;
+    }
+
+    .compramos-text {
+        width: 100%;
+    }
+
+    .compramos-text>h2 {
+        font-size: 2rem;
+        width: 95%;
+    }
+
+    .compramos-text>p {
+        font-size: 1.3rem;
+        width: 90%;
+    }
+
+    /* tres-icons */
+    .tres-icons-container {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .tres-icons-subcontainer {
+        padding: 1rem;
+        height: max-content;
+
+    }
+
+    .tres-icons-subcontainer>img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .tres-icons-subcontainer>h2 {
+        font-size: 23px;
+    }
+
+    .tres-icons-subcontainer>span {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    /* Footer */
+    .fot-div>img {
+        height: 5rem;
+    }
+
+}

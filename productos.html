@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKSIN - Productos</title>
+    <link rel="stylesheet" href="css/style-productos.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <a href="index.html"><img src="img/logo-n.png" alt="Logo Niksin"></a>
+            <li class="nav-item"><a href="index.html">INICIO</a></li>
+            <li class="nav-item"><a href="productos.html">CATÁLOGO</a></li>
+            <li class="nav-item"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Renderizado en productos.js -->
+    <main class="productosyfiltros-container">
+
+        <section class="filtros">
+            <div class="filtrorango">
+                <span>Filtrar por Precio</span>
+                <label for="precioRango">$<span id="precioMaximo">10000</span></label>
+                <input type="range" id="precioRango" min="0" max="10000" step="1000" value="10000">
+            </div>
+            <div class="filtrorango">
+                <span>Filtrar por Categoría</span>
+                <select id="filtrocategoria">
+                    <option value="nada">Todos</option>
+                    <option value="Collar">Collares</option>
+                    <option value="Reloj">Relojes</option>
+                </select>
+            </div>
+            <div class="filtrorango">
+                <span>Filtrar por Material</span>
+                <select id="filtromaterial">
+                    <option value="nada">Todos</option>
+                    <option value="Oro">Oro</option>
+                    <option value="Plata">Plata</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+            </div>
+
+            <button class="btnlimpiarfiltros">Limpiar Filtros</button>
+        
+        </section>
+
+        <section class="productos-container">
+        </section>
+
+    </main>
+
+
+    <script type="module" src="./js/productos.js"></script>
+</body>
+
+</html>
